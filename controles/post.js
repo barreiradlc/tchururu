@@ -13,8 +13,9 @@ exports.getPost = (req, res) => {
     //     ]
     // });
     const posts = Post.find()
+    .select("_id titulo corpo")
     .then((posts) => {
-        res.status(200).json({posts: posts})
+        res.json({ posts })
     })
     .catch(err => console.log(err));
 };

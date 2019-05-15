@@ -1,5 +1,7 @@
+// banco
 const mongoose = require("mongoose");
 
+// modelagem Post
 const SchemaPost = new mongoose.Schema({
     titulo: {
         type:String,
@@ -15,4 +17,5 @@ const SchemaPost = new mongoose.Schema({
     } 
 });
 
+// Export
 module.exports = mongoose.model("Post", SchemaPost);
